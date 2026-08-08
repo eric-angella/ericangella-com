@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #1B1918;
+  --bg-elevated: #232120;
+  --line: #3A3733;
+  --text: #EDE9E3;
+  --text-muted: #A39C92;
+  --text-faint: #6E6A63;
+  --max-w: 640px;
+
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-display: 'Fraunces', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--text);
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0;
+  padding: 40px 0 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+}

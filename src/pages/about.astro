@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Eric Angella" description="About Eric Angella">
+  <div class="about">
+    <p class="section-label" style="padding-top: 60px;">About</p>
+    <h1>More than the headline.</h1>
+    <p>
+      Placeholder — bring your longer bio here whenever you're ready. This
+      page can hold as much or as little as you want; the homepage hero is
+      deliberately short by design.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    padding-bottom: 60px;
+  }
+  .about h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 44px);
+    margin: 8px 0 28px;
+  }
+  .about p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+</style>

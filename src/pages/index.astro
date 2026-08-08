@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PostList from '../components/PostList.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout>
+  <Hero />
+
+  <hr class="rule" style="margin-top: 44px;" />
+
+  <p class="section-label">Recent Writing</p>
+  <PostList posts={posts} />
+
+  <hr class="rule" />
+
+  <p class="section-label">Elsewhere</p>
+  <div class="elsewhere">
+    <p>
+      Ghostwriting and content strategy at
+      <a href="https://pixelenginesf.com">work</a>. Occasional notes on
+      <a href="https://github.com/eric-angella">GitHub</a>. Say hello via
+      <a href="mailto:eric@ericangella.com">email</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .elsewhere {
+    padding: 20px 0 8px;
+  }
+  .elsewhere p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin: 0;
+  }
+</style>
