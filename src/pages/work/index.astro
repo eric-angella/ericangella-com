@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Work — Eric Angella" description="Ghostwriting and LinkedIn strategy services">
+  <p class="section-label" style="padding-top: 60px;">Work</p>
+  <h1 class="page-title">Ways to work together.</h1>
+
+  <div class="offer-list">
+    <a href="/work/linkedin-ghostwriting" class="offer-item">
+      <h2>LinkedIn Ghostwriting</h2>
+      <p>Ongoing thought leadership content, written in your voice.</p>
+    </a>
+    <a href="/work/linkedin-overhaul" class="offer-item">
+      <h2>LinkedIn Overhaul</h2>
+      <p>A focused audit and rebuild of your profile and positioning.</p>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 44px);
+    margin: 8px 0 40px;
+  }
+  .offer-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .offer-item {
+    display: block;
+    text-decoration: none;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .offer-item:first-child {
+    padding-top: 0;
+  }
+  .offer-item h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 26px;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .offer-item:hover h2 {
+    color: var(--text-muted);
+  }
+  .offer-item p {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 17px;
+    margin: 0;
+  }
+</style>

@@ -15,19 +15,17 @@ const posts = allPosts
 
   <hr class="rule" style="margin-top: 44px;" />
 
-  <p class="section-label">Recent Writing</p>
-  <PostList posts={posts} />
+<p class="section-label">Recent Writing</p>
+<PostList posts={posts} />
+<p class="view-all"><a href="/blog">View all writing →</a></p>
 
   <hr class="rule" />
 
   <p class="section-label">Elsewhere</p>
   <div class="elsewhere">
-    <p>
-      Ghostwriting and content strategy at
-      <a href="https://pixelenginesf.com">work</a>. Occasional notes on
-      <a href="https://github.com/eric-angella">GitHub</a>. Say hello via
-      <a href="mailto:eric@ericangella.com">email</a>.
-    </p>
+<p>
+  Ghostwriting and content strategy at <a href="https://pixelenginesf.com">work</a>. Occasional notes on <a href="https://github.com/eric-angella">GitHub</a>. Say hello via <a href="mailto:eric@ericangella.com">email</a>.
+</p>
   </div>
 </BaseLayout>
 
@@ -41,4 +39,18 @@ const posts = allPosts
     color: var(--text-muted);
     margin: 0;
   }
+.view-all {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 4px 0 0;
+}
+.view-all a {
+  color: var(--text-faint);
+  text-decoration: none;
+}
+.view-all a:hover {
+  color: var(--text);
+}
 </style>

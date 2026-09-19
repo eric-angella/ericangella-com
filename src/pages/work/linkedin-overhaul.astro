@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const ctaMailto = 'mailto:eric@ericangella.com?subject=Claim%20My%20Free%20LinkedIn%20Workover';
+
+// Update this each time capacity resets.
+const availableSlots = 1;
+const openDate = 'TBD'; // e.g. "September 2026"
+---
+
+<BaseLayout
+  title="Free LinkedIn Workover — Eric Angella"
+  description="A free, hands-on rework of your LinkedIn profile — limited to a small number of people."
+>
+  <a href="/work" class="back">← Work</a>
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <h1>Your knowledge is valuable.</h1>
+    <p class="lede">
+      But the people who could use it can't find it on your LinkedIn profile.
+      Or know what to do next after they land on it.
+    </p>
+    <p class="lp-body">
+      I built a tool that closes that gap. For a limited number of people,
+      I'll run it on your profile for free.
+    </p>
+    <p class="lp-availability">{availableSlots} available as of {openDate}</p>
+    <a href={ctaMailto} class="btn-primary">Claim Your Free Workover →</a>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- THE PROBLEM -->
+  <p class="section-label">The Problem</p>
+  <h2 class="lp-h2">You Know Things Most People Don't.</h2>
+  <p class="lp-body lp-max">
+    You've solved problems, made calls under pressure, built things that
+    worked. None of that is on your profile.
+  </p>
+  <p class="lp-body lp-max">
+    What's there instead is a job title, a list of duties, and a summary
+    that could belong to a thousand other people. Anyone who lands on that
+    profile scrolls past it, confused about what you actually do.
+  </p>
+  <p class="lp-body lp-max">
+    There's a newer wrinkle too: LinkedIn uses your profile to decide who
+    sees your posts. A vague profile sends a vague signal, and the
+    algorithm has nothing clear to route your content toward. So a generic
+    profile costs you twice — once with anyone who lands on it, and again
+    every time you post.
+  </p>
+  <blockquote class="lp-quote">I call it your Authority Gap.</blockquote>
+  <p class="lp-body lp-max">
+    It's the distance between what you know and what you've actually said
+    publicly. It's costing you the recognition, the inbound conversations,
+    and the opportunities that go to people who are simply louder about
+    less.
+  </p>
+
+  <hr class="rule" />
+
+  <!-- THE OFFER -->
+  <p class="section-label">The Offer</p>
+  <h2 class="lp-h2">A Free, Hands-On Rework</h2>
+  <p class="lp-body lp-max">
+    I'm finishing a LinkedIn Workover tool and opening it to a small number
+    of people before it's public. You get a free, hands-on rework of your
+    profile. I get to watch it work on a real profile and hear what you
+    think.
+  </p>
+
+  <div class="lp-fit-grid">
+    <div>
+      <p class="lp-fit-label">What you get</p>
+      <ul class="lp-plain-list">
+        <li>A full pass on your headline, About section, and experience narrative</li>
+        <li>A clear pathway for others to work with you ("call to action")</li>
+        <li>A clear read on what's currently hiding your expertise instead of showing it</li>
+        <li>Specific, usable rewrites, not generic advice</li>
+      </ul>
+    </div>
+    <div>
+      <p class="lp-fit-label">What it costs you</p>
+      <ul class="lp-plain-list">
+        <li>About the time it takes to answer a short set of questions and give me honest feedback afterward</li>
+      </ul>
+    </div>
+  </div>
+  <p class="lp-body lp-max lp-italic">That's it. No pitch at the end, no obligation.</p>
+
+  <hr class="rule" />
+
+  <!-- WHY FREE -->
+  <p class="section-label">Why Free</p>
+  <h2 class="lp-h2">Because It Isn't Finished Yet.</h2>
+  <p class="lp-body lp-max">
+    The only way to finish it right is to run it on real people with real
+    profiles. I'd rather trade the work for your honest reaction than guess
+    what's missing.
+  </p>
+  <p class="lp-body lp-max">If it's not useful to you, I want to know that too.</p>
+
+  <hr class="rule" />
+
+  <!-- WHO THIS IS FOR -->
+  <p class="section-label">Who This Is For</p>
+  <h2 class="lp-h2">Depth Without a Profile That Shows It.</h2>
+  <p class="lp-body lp-max">
+    This works best for technical founders, CTOs, VPs of Engineering, and
+    product leaders — people with real depth who've never had the time, or
+    the interest, in translating it into a profile that shows it.
+  </p>
+
+  <hr class="rule" />
+
+  <!-- CAPACITY -->
+  <p class="section-label">Capacity</p>
+  <h2 class="lp-h2">Five, Rolling.</h2>
+  <p class="lp-body lp-max">
+    I'm only taking 5 of these on a rolling basis, run personally, one at a
+    time. Once they're booked, the next round opens later.
+  </p>
+  <a href={ctaMailto} class="btn-primary">Claim Your Free Workover →</a>
+
+  <hr class="rule" />
+
+  <!-- FAQ -->
+  <p class="section-label">FAQ</p>
+  <h2 class="lp-h2">A Few Questions</h2>
+
+  <div class="lp-faq-list">
+    <div class="lp-faq-item">
+      <p class="lp-faq-q">Is this really free?</p>
+      <p class="lp-faq-a">Yes. In exchange, I ask for honest feedback after — what worked, what didn't, what you'd pay for.</p>
+    </div>
+    <div class="lp-faq-item">
+      <p class="lp-faq-q">What if I'm not ready to publish anything yet?</p>
+      <p class="lp-faq-a">Fine. This is about seeing what's possible, not committing to anything.</p>
+    </div>
+    <div class="lp-faq-item">
+      <p class="lp-faq-q">Do you keep doing this after the tool launches?</p>
+      <p class="lp-faq-a">No. This free round is limited to the current group. After that, it becomes part of the paid offering.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .back {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 60px;
+  }
+  .back:hover {
+    color: var(--text);
+  }
+
+  .lp-max {
+    max-width: 560px;
+  }
+
+  .lp-hero {
+    padding: 20px 0 0;
+  }
+  .lp-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(38px, 7vw, 56px);
+    line-height: 1.05;
+    margin: 0 0 22px;
+    max-width: 600px;
+  }
+  .lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--text-muted);
+    margin: 0 0 22px;
+    max-width: 520px;
+  }
+  .lp-body {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0 0 20px;
+  }
+  .lp-italic {
+    font-style: italic;
+  }
+  .lp-availability {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 22px;
+  }
+
+  .lp-h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(26px, 4.5vw, 34px);
+    line-height: 1.15;
+    margin: 4px 0 22px;
+    max-width: 620px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 26px;
+    margin: 8px 0 44px;
+    border-radius: 2px;
+    transition: opacity 0.15s ease;
+  }
+  .btn-primary:hover {
+    opacity: 0.85;
+    color: var(--bg);
+  }
+
+  .lp-quote {
+    border-left: 2px solid var(--line);
+    padding-left: 22px;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--text);
+    margin: 30px 0;
+  }
+
+  .lp-fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 26px 0;
+  }
+  .lp-fit-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 16px;
+  }
+  .lp-plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .lp-plain-list li {
+    font-size: 16px;
+    color: var(--text-muted);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .lp-plain-list li:last-child {
+    border-bottom: none;
+  }
+
+  .lp-faq-list {
+    margin: 20px 0;
+  }
+  .lp-faq-item {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .lp-faq-item:last-child {
+    border-bottom: none;
+  }
+  .lp-faq-q {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 19px;
+    margin: 0 0 10px;
+  }
+  .lp-faq-a {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 540px;
+  }
+
+  @media (max-width: 640px) {
+    .lp-fit-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+</style>
